@@ -103,7 +103,7 @@ boolean Plugin_010(byte function, struct EventStruct *event, String& string)
           *Plugin_010_init = Plugin_010_setResolution(address);
         }
         
-      Wire.requestFrom(address, 0x2);
+      Wire.requestFrom(address, uint8_t(0x2));
       if (Wire.available())
         {
           byte b1 = Wire.read();
